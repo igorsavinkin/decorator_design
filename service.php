@@ -4,12 +4,11 @@
 // Please calculate the price of a coffee with milk using pattern decorator. 
 // Answer in code would work best.
 
-// importing all the needed classes including basic decorator class
+// importing all the classes including basic Decorator class
 include 'autoloader.php'; 
 
-
 /* 
- * Клиентский код работает со всеми объектами, используя интерфейс Компонента.
+ * Клиентский код работает со всеми объектами, используя интерфейс Product.
  * Таким образом, он остаётся независимым от конкретных классов компонентов, с
  * которыми работает.
  */
@@ -18,10 +17,10 @@ function count_cost(Product $product1, Product $product2)
     return $product1->getPrice() + $product2->getPrice();
 }
 
-echo '<h3>Decorator pattern</h3>'; 
+echo '<h3>Decorator pattern example.</h3>'; 
 $product = new ConcreteProduct;
 
-$milk = new Milk($product); // we decorate the product instance with Milk class 
+$milk = new Milk($product); // we decorate the product instance with Milk class decorator
 echo "We've got a decorated ",  $milk->getName();
 echo '<br />', $milk->get_Type();
 echo "</br></br>";
@@ -31,5 +30,5 @@ echo "We've got a decorated ", $coffee->getName();
 echo '<br />', $coffee->get_Type();
 echo "</br></br>";
 
-echo 'Sum cost: ', count_cost($milk, $coffee);
+echo 'Sum cost of milk and coffee: ', count_cost($milk, $coffee);
 ?>

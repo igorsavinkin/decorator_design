@@ -5,7 +5,7 @@
 */
 interface Product
 {
-    public function getName(): string;
+	public function getName(): string;
 	public function get_Type(): string;
 	public function getPrice(): float;
 }
