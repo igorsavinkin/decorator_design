@@ -4,6 +4,9 @@
 // Please calculate the price of a coffee with milk using pattern decorator. 
 // Answer in code would work best.
 
+// The class decorator theory and example: 
+// https://designpatternsphp.readthedocs.io/en/latest/Structural/Decorator/README.html
+
 // importing all the classes including basic Decorator class
 include 'autoloader.php'; 
 
